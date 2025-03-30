@@ -1,0 +1,119 @@
+:root {
+    --color-primary: #9C8AA5;     
+    --color-accent: #D57D6D;      
+    --color-highlight: #ffefd2;   
+    --color-background: #2B2D42;  
+    --color-surface: #D7D7D7;     
+    --color-text: #1C1C1C;        
+    --color-muted-text: #6B6B6B;  
+    --color-border: #C5BFCB;      
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-highlight);
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-family: Gloria, serif;
+    font-weight: 300;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--color-highlight);
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    height: 400px;
+    color: var(--color-text);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Bilder/div-chocs.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.hero h2 {
+    font-size: 2em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-highlight);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-accent);
+}
+
+.about {
+    padding: 20px;
+    background-color: var(--color-highlight);
+    text-align: center;
+}
+
+footer {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
