@@ -8,7 +8,7 @@ async function sendMessage() {
     appendToChat("You", userText);
     input.value = "";
   
-    const response = await fetch("http://localhost:3000/chat", {
+    const response = await fetch("https://wunderbite-chatbot.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: userText }),
