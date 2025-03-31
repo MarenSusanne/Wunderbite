@@ -39,7 +39,24 @@
     <footer>
         <p>&copy; 2025 Wünderbite. All rights reserved.</p>
     </footer>
+    <!-- Chat Toggle Button -->
+    <div id="chat-toggle" onclick="toggleChat()">💬 Chat with WÜNDER</div>
 
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="hidden">
+        <div class="chat-header">
+            WÜNDER
+            <span id="chat-close" onclick="toggleChat()">✕</span>
+        </div>
+        <div class="chat-container">
+            <div id="chat-log"></div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Ask me about flavor..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
+    <script src="chatbot/public/script.js"></script>
 </body>
 </html>
